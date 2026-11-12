@@ -1,0 +1,28 @@
+{
+  "name": "starfruit-emoji",
+  "version": "0.0.0",
+  "private": true,
+  "description": "starfruit 웹 · 모바일이 같이 쓰는 이모지 데이터 — 기본 세트(Noto) · 디자인팀 세트",
+  "license": "Apache-2.0",
+  "type": "module",
+  "exports": {
+    "./noto/catalog.json": "./noto/catalog.json",
+    "./noto/search-ko.json": "./noto/search-ko.json",
+    "./noto/svg/*": "./noto/svg/*",
+    "./custom/catalog.json": "./custom/catalog.json",
+    "./custom/files/*": "./custom/files/*",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build:noto": "node scripts/build-noto.mjs",
+    "lock:custom": "node scripts/add-custom-names.mjs",
+    "test": "node --test test/check.test.mjs"
+  },
+  "devDependencies": {
+    "svgo": "3.3.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tnh-joeunji/starfruit-emoji.git"
+  }
+}
